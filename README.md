@@ -1,3 +1,5 @@
-# fellows-onboarding-talk
+# CSVconf talk 2016 - massive-scale reuse of scientific outputs
 
-http://blahah.net/fellows-onboarding-talk
+The talk I gave at CSVconf 2016 about massive-scale reuse of scientific outputs.
+
+http://rik.smith-unna.com/csvconf-2016-reusing-science-output
