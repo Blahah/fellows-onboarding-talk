@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
     <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
-    <title>Easy, massive-scale reuse of scientific outputs (CSVconf Berlin 2016)</title>
+    <title>Fellowship Introduction - RSU</title>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -58,7 +58,7 @@
       }
       .house { width: 15px; }
       .strike { text-decoration: line-through; }
-      .footnote { position: absolute; left: 30px; bottom: 30px; font-size: 0.7em; }
+      .footnote { font-size: 0.7em; }
       body {
         font-family: 'Droid Serif';
       }
@@ -162,161 +162,372 @@
         float: right;
         padding-top: 1em;
       }
-      .zoo {
-        width: 80%;
-      }
-      img {
-        width: 100%;
-        max-width: 100%;
-      }
-      .footnote > img {
-        width: auto;
-      }
     </style>
   </head>
   <body>
     <textarea id="source">
+layout: true
+class: center, middle, inverse
+---
+name:
+# oh hai!
+Richard Smith-Unna / Rik / RSU / blahah[404]
 
-# Easy, massive-scale reuse of scientific outputs
+<img src="https://raw.githubusercontent.com/Blahah/fellows-onboarding-talk/gh-pages/img/me.jpg" style="width: 30%;"/>
 
-### Richard Smith-Unna
+.terminal[
+~/{{ name }} $ .cmd[pwd]
 
-.footnote[![](http://i.creativecommons.org/p/mark/1.0/88x31.png) This work is free of known copyright restrictions.]
+.output[&nbsp;/home/blahah]
+
+~/{{ name }} $ .prompt[|]
+]
+---
+name: bio
+class: inverse
+layout: false
+
+.left-column[
+  ## Bio
+]
+.right-column[
+
+### PhD student in the Hibberd Lab at .strike[Hogwarts] the University of Cambridge
+
+<img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Emmanuel_College_Front_Court%2C_Cambridge%2C_UK_-_Diliff.jpg/1024px-Emmanuel_College_Front_Court%2C_Cambridge%2C_UK_-_Diliff.jpg" style="width: 100%;"/>
+
+.footnote[.red[*] photo of Emmanuel College by Wikipedia User:Diliff]
+
+]
+
+.terminal[
+~/ $ .cmd[cd bio]
+
+~/{{ name }} $ .prompt[|]
+]
 
 ---
+name: bio
+class: inverse
+layout: false
 
-## Disclaimer
+.left-column[
+  ## Bio
+]
+.right-column[
 
-Finding out about scientific publishing makes a lot of people angry.
+### Work on C4 photosynthesis
 
-*If you have high blood pressure, stay at your own risk*
+- how does it work?
+- can we make rice better with it?
 
----
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Terrace_field_yunnan_china_denoised.jpg" style="width: 100%;">
 
-## The scale of science publishing
+.footnote[.red[*] pretty but barely relevant photo by Jialiang Goa via Wikimedia]
 
-![](./crossref_facet_data/plots/papers_per_year.png)
+]
 
-Total (as of 2016-02-05): **80,629,821**
-
-*You can get up-to-date data at http://api.crossref.org/works?facet=t&rows=0*
-
----
-
-# Imagine the insights we must be gaining by analysing all that literature!
-
----
-
-## Ha... nope!
-
-![](./crossref_facet_data/plots/papers_per_license.png)
-
-Just 1,435,841 (as of 2016-02-05) are legally reusable. That's *less than 1.8% of the literature*.
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
 
 ---
+name: bio
+class: inverse
+layout: false
 
-## But didn't we pay for that?
+.left-column[
+  ## Bio
+]
+.right-column[
 
-![](./crossref_facet_data/plots/papers_per_funder.png)
+### Live in ~600yo house in Saffron Walden, Essex, UK
+<img src ="http://www.essexlifemag.co.uk/polopoly_fs/1.3931484.1422347926!/image/image.jpg_gen/derivatives/landscape_630/image.jpg" style="width: 100%;"/>
 
-Yes. Yes we did.
+It's the blue one. Yes, we are jealous of the yellow one.
 
----
+]
 
-## So why can't we...?
-
-![](./crossref_facet_data/plots/papers_per_publisher.png)
-
----
-
-## What CAN we do?
-
-- Get metadata and do basic bibliometrics
-
-- Work with the Open Access literature and do full-text and / or data mining
-
----
-
-## getpapers. It, uh... gets papers
-
-https://github.com/contentmine/getpapers
-
-e.g.
-
-### get PDFs (eew, I know)
-
-```
-getpapers --query nanotoxicity --pdf --outdir nano
-```
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
 
 ---
+name: bio
+class: inverse
+layout: false
 
-## More useful stuff
+.left-column[
+  ## Bio
+]
+.right-column[
 
-### get JATS XML
+### That's here btw...
+<img src ="https://raw.githubusercontent.com/Blahah/fellows-onboarding-talk/gh-pages/img/map.png" style="width: 100%;"/>
+.footnote[via Wikipedia]
 
-```
-getpapers --query nanotoxicity --xml --outdir nano
-```
-or...
+]
 
-### get supplementary data
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
 
-```
-getpapers --query nanotoxicity --supp --outdir nano
-```
-OR...
-
-### get text-mined terms
-
-```
-getpapers --query nanotoxicity --minedterms --outdir nano
-```
----
-
-### from a search query to...
-
-- full bibliographic metadata (including citation counts
-
-- all open access fulltexts (XML and PDF)
-
-- all supplementary files and figures
-
-- text-mined terms of various biomedical ontologies
-
-- summary CSVs
 
 ---
+name: bio
+class: inverse
+layout: false
 
-## **Genes and proteins** mentioned in papers about nanotoxicity
+.left-column[
+  ## Bio
+]
+.right-column[
 
-![](getpapers_demo/plots/gene_protein.png)
+### With these guys
+
+<img src ="https://raw.githubusercontent.com/Blahah/fellows-onboarding-talk/gh-pages/img/family.png" style="width: 100%;"/>
+
+If you didn't squee, you have no heart.
+
+]
+
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
 
 ---
+name: inspiration
+class: inverse
+layout: false
 
-## **Diseases mentioned** in papers about nanotoxicity
+.left-column[
+  ## Bio
+  ## Sources of inspiration
+]
+.right-column[
 
-![](getpapers_demo/plots/disease.png)
+## hip-hop / grime music ~1997
+
+some lessons:
+
+- first alerted me to my privelege
+- intelligence is not correlated with education
+- subversive political channel
+
+[see Akala](https://www.youtube.com/watch?v=sEOKgjoxoto)
+
+]
+
+.terminal[
+~/ $ .cmd[cd ../inspiration]
+
+~/{{ name }} $ .prompt[|]
+]
 
 ---
+name: inspiration
+class: inverse
+layout: false
 
-## making it accessible... Science Fair
+.left-column[
+  ## Bio
+  ## Sources of inspiration
+]
+.right-column[
 
-<img style="width: 300px" src="img/logo.png">
+## hackers (movie definition) ~2000
 
-https://github.com/codeforscience/sciencefair
+some lessons:
 
-talk to us: https://gitter.im/codeforscience/community
+- challenging power structures is fun
+- all systems are vulnerable
+- poke the bear, get bitten
+
+]
+
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
 
 ---
+name: inspiration
+class: inverse
+layout: false
 
-Thanks!
+.left-column[
+  ## Bio
+  ## Sources of inspiration
+]
+.right-column[
 
-- twitter: @blahah404
-- github: @blahah
-- https://keybase.io/blahah
+## hackers (mit/HN definition) ~2013
 
-.footnote[Slideshow created using [remark](http://github.com/gnab/remark)]
+some lessons:
+
+- ideas are cheap
+- thrill of creation
+
+]
+
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
+
+---
+name: inspiration
+class: inverse
+layout: false
+
+.left-column[
+  ## Bio
+  ## Sources of inspiration
+]
+.right-column[
+
+## principled people
+
+- Aaron Swartz
+- Julia Reda
+- Peter Murray-Rust
+
+]
+
+.terminal[
+~/{{ name }} $ .prompt[|]
+]
+
+---
+name: open_science
+class: inverse
+layout: false
+
+.left-column[
+  ## Bio
+  ## Sources of inspiration
+  ## Open science
+]
+.right-column[
+
+### I love science
+### It's not what I thought it was (I feel cheated)
+### Lacks design
+### Systematically exploited by bad actors
+### AAAAARRRRRGGGGHHHH!!!
+### Open science is what science should be
+
+]
+
+.terminal[
+~/ $ .cmd[cd ../open_science]
+
+~/{{ name }} $ .prompt[|]
+]
+
+---
+name: projects
+class: inverse
+layout: false
+
+.left-column[
+  ## Bio
+  ## Sources of inspiration
+  ## Open science
+  ## Projects
+]
+.right-column[
+
+## Solvers.io (http://solvers.io)
+## BioJulia (http://github.com/biojulia)
+## ContentMine (http://contentmine.org)
+## Training
+## Get under some skin
+
+]
+
+.terminal[
+~/ $ .cmd[cd ../projects]
+
+~/{{ name }} $ .prompt[|]
+]
+
+---
+name: blocking_points
+class: inverse
+layout: false
+
+.left-column[
+  ### Bio
+  ### Sources of inspiration
+  ### Open science
+  ### Projects
+  ### Blocking points
+]
+.right-column[
+
+## Time/energy [unblocked!]
+## Inclusivity and diversity in communities
+## FUD from entrenched powers (e.g. publishers)
+## Closed culture / bad actors
+
+]
+
+.terminal[
+~/ $ .cmd[cd ../blocking_points]
+
+~/{{ name }} $ .prompt[|]
+]
+
+
+---
+name: fellowship_goals
+class: inverse
+layout: false
+
+.left-column[
+  ### Bio
+  ### Sources of inspiration
+  ### Open science
+  ### Projects
+  ### Blocking points
+  ### Fellowship goals
+]
+.right-column[
+
+## Local scale
+
+- Speed up culture/practise change locally
+- Excite and empower new scientists
+- Organise local open community, take strategic action as a group
+
+## Global scale
+
+- Catalyse a generation of open scientists
+- Expel bad actors from science!
+
+]
+
+.terminal[
+~/ $ .cmd[cd ../fellowship_goals]
+
+~/{{ name }} $ .prompt[|]
+]
+
+
+---
+name: last-page
+class: inverse
+
+# That's all folks (for now)!
+
+## http://blahah.net
+
+## https://github.com/blahah
+
+## @blahah404 / rds45@cam.ac.uk
+
+### View this slideshow: [http://blahah.net/fellows-onboarding-talk](http://blahah.net/fellows-onboarding-talk)
+
+Slideshow created using [remark](http://github.com/gnab/remark).
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
     <script>
